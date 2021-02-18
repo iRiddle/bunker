@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'GeometriaLight', sans-serif;
+}
+
 button {
     cursor: pointer;
 }
@@ -14,6 +18,8 @@ header {
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -30,6 +36,15 @@ ul {
 
 .header__container {
     display: none;
+}
+
+.header__btn {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
 }
 
 .main,
@@ -83,6 +98,14 @@ ul {
     transform: rotate(-12deg);
     margin-right: 24px;
     margin-bottom: 120px;
+    font-family: 'GeometriaBold', sans-serif;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.main__title span {
+    font-size: 36px;
+    line-height: 43px;
 }
 
 .main__btn {
@@ -126,6 +149,7 @@ ul {
     background-blend-mode: color;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: bottom;
 }
 
 .main__opportunities-block {
@@ -134,6 +158,10 @@ ul {
     align-items: center;
     margin: 0 auto;
     margin-top: 88px;
+    font-family: 'GeometriaBold', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .main__opportunities-description {
@@ -149,24 +177,23 @@ ul {
 }
 
 .secondary-title {
-    width: 240px;
+    width: 100%;
     background-color: #000000;
     color: #FFFFFF;
-    transform: skewX(-30deg);
     transform-origin: top;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .secondary-title__container {
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
-.secondary-title div {
-    transform: skewX(30deg);
 }
 
 .main__slider {
@@ -237,10 +264,17 @@ ul {
 .slider__title {
     display: flex;
     justify-content: center;
+    font-family: "GeometriaBold", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .slider__description {
-    /*  */
+    text-align: justify;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
 }
 
 .main__video {
@@ -327,10 +361,23 @@ ul {
     background-color: #FFC700
 }
 
+.schedule__legend {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
 .schedule__data {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.schedule__data h3 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'GeometriaBold', sans-serif;
 }
 
 .schedule__container {
@@ -345,6 +392,26 @@ ul {
     padding: 6px 12px;
 }
 
+.main__info {
+    margin-bottom: 44px;
+}
+
+.info__title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: 'GeometriaBold', sans-serif;
+}
+
+.info__description {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+}
+
 .games {
     display: flex;
     flex-wrap: wrap;
@@ -356,23 +423,36 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 135px;
-    height: 185px;
+    position: relative;
+    width: 145px;
+    height: 190px;
     margin-bottom: 12px;
 }
 
 .games__count {
     text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 16px;
+    font-family: 'GeometriaBold', sans-serif;
 }
 
-.games__favorite {
-    font-weight: bold;
-    transform: rotate(-20deg);
+.games__cost {
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    font-family: 'GeometriaBold', sans-serif;
 }
 
+.games__favorite,
 .games__discount {
+    margin-top: 12px;
     font-weight: bold;
     transform: rotate(-20deg);
+    position: absolute;
+    bottom: 25px;
 }
 
 .games__block--vector1 {
@@ -400,8 +480,6 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.main__news {}
 
 .news__figure {
     width: 135px;
@@ -486,7 +564,6 @@ ul {
     transition: 0.4s;
 }
 
-
 /* image poster clicked, player class added using js */
 
 .main__video.player img {
@@ -497,6 +574,56 @@ ul {
     display: none;
 }
 
+.aside {
+    height: 100vh;
+    width: 320px;
+    transform: translate(-320px);
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #000000;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.aside__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 12px;
+}
+
+.aside__close {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.aside__close img {
+    width: 100%;
+    height: 100%;
+}
+
+.aside li {
+    margin-bottom: 12px;
+}
+
+.aside a {
+    text-decoration: none;;
+    color: #fff;
+    transition: 0.3s;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.aside a:hover {
+    color: #f1f1f1;
+}
 
 /* media */
 
@@ -506,9 +633,11 @@ ul {
         padding: 0 24px;
         width: 480px;
     }
+
     .games__block {
         width: 215px;
     }
+
     .games__block--vector1,
     .games__block--vector2,
     .games__block--vector3,
@@ -516,20 +645,59 @@ ul {
         width: 200px;
         height: 275px;
     }
+
     .news__figure {
         width: 200px;
     }
+
     .news__img {
         width: 100%;
-        height: 180px;
+        height: 200px;
     }
+
     .main__box {
         width: 450px;
         height: 350px;
     }
+
+    .main__title {
+        margin-right: -150px;
+        margin-top: 0;
+    }
+
+    .secondary-title {
+        width: 280px;
+        transform: skewX(-30deg);
+    }
+
+    .secondary-title div {
+        transform: skewX(30deg);
+    }
+
+    .games__count {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .games__cost {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 43px;
+    }
+
+    .games__favorite,
+    .games__discount {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 43px;
+        text-align: end;
+        bottom: -15px;
+    }
 }
 
 @media (min-width: 540px) {
+
     .main__container,
     .footer__container {
         padding: 0 24px;
@@ -538,60 +706,97 @@ ul {
 }
 
 @media (min-width: 768px) {
+
     .main__container,
     .footer__container {
         padding: 0 42px;
         width: 768px;
     }
+
     .footer {
         flex-direction: row;
     }
+
     .footer__map {
         margin-right: 42px;
     }
+
     .footer__map-frame {
         width: 100%;
         height: 250px;
     }
+
     .footer__contacts {
         margin-top: 34px;
     }
+
     .games {
         justify-content: space-around;
     }
+
     .games__block {
-        width: 260px;
+        width: 280px;
         height: 350px;
     }
+
     .main__opportunities {
         background-size: cover;
+        background-image: linear-gradient(#FFC700, #FFC700), url('./img/content/city2.png');
+        background-blend-mode: color;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+
     .main__opportunities-lines {
         background-repeat: repeat;
     }
+
     .main__opportunities-info {
         display: flex;
         justify-content: space-between;
         width: 100%;
         max-width: 1200px;
     }
+
     .schedule__container {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
+
     .schedule__container>.schedule__data {
         align-items: flex-start;
     }
+
     .secondary-title {
         align-self: flex-start;
     }
+
     .main__opportunities-lines {
         margin-top: 56px;
     }
+
     .main__box {
         width: 668px;
         height: 514px;
+    }
+
+    .main__title {
+        margin-right: -350px;
+        margin-top: 0;
+    }
+
+    .games__favorite,
+    .games__discount {
+        bottom: 45px;
+    }
+
+    .news__figure {
+        width: 280px;
+    }
+
+    .news__img {
+        height: 220px;
     }
 }
 
@@ -600,17 +805,21 @@ ul {
         display: flex;
         padding: 22px 36px;
     }
+
     .header__container--mobile {
         display: none;
     }
+
     .header__nav {
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
+
     .header__nav div>img {
         margin-right: 35px;
     }
+
     .header__links {
         display: flex;
         align-items: center;
@@ -618,10 +827,12 @@ ul {
         margin: 0;
         z-index: 99999;
     }
+
     .header__link {
         margin-right: 30px;
         color: #fff;
     }
+
     .header__link a {
         display: block;
         cursor: pointer;
@@ -629,48 +840,59 @@ ul {
         text-decoration: none;
         transition: 0.4s;
     }
+
     .header__link a:hover {
         transform: scale(1.1);
         transition: 0.4s;
     }
+
     .header__link:last-child {
         margin: 0;
     }
+
     .main__container,
     .footer__container {
         width: 1024px;
     }
+
     .news {
         width: 100%;
     }
+
     .main__slider-container {
         display: flex;
         flex-direction: row;
         width: 100%;
     }
+
     .main__slider-wrapper {
         width: 490px;
         margin-right: 80px;
         height: 100%;
         flex-direction: column;
     }
+
     .main__video {
         padding-bottom: 38.25%;
         margin: 0;
     }
+
     .main__video img,
     .main__video iframe {
         width: 100%;
         height: 360px;
     }
+
     .main__video img {
         /* FIX */
         display: none;
     }
+
     .games {
         width: 100%;
         justify-content: space-between;
     }
+
     .schedule__container {
         margin: 34px auto;
     }
@@ -681,21 +903,45 @@ ul {
         padding: 0 24px;
         width: 1200px;
     }
+
     .footer .footer__container {
         width: 600px;
     }
+
     .footer {
         display: flex;
         justify-content: center;
     }
+
     .footer__map {
         width: 600px;
     }
+
     .header__container {
         width: 1200px;
         margin: 0 auto
     }
+
     .schedule__container {
         justify-content: space-between;
     }
+}
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'GeometriaBold';
+    src: url('./fonts/Geometria-Bold.eot');
+    src:
+        url('./fonts/Geometria-Bold.woff') format('woff'),
+        url('./fonts/Geometria-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'GeometriaLight';
+    src: url('./fonts/Geometria-Light.eot');
+    src:
+        url('./fonts/Geometria-Light.woff') format('woff'),
+        url('./fonts/Geometria-Light.ttf') format('truetype'),
 }
