@@ -10,11 +10,18 @@ body {
 
 button {
     cursor: pointer;
+    outline: none;
 }
 
 header {
     width: 100%;
     position: absolute;
+}
+
+.header--lk {
+    background-color: #FFC700;
+    color: #000000;
+    position: initial;
 }
 
 ul {
@@ -28,6 +35,19 @@ ul {
     justify-content: space-between;
     width: 100%;
     padding: 22px;
+}
+
+.header__link a {
+    color: #fff;
+}
+
+.header--lk .header__link a {
+    color: #000;
+}
+
+
+.header__logo-container {
+    display: flex;
 }
 
 .header__logo-container img:last-child {
@@ -64,7 +84,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 12px;
+    padding: 12px;
     width: 320px;
 }
 
@@ -84,6 +104,23 @@ ul {
     height: 100%;
 }
 
+.main__payment-container {
+    margin-bottom: 80px;
+}
+
+
+.main__payment-list li::before {
+    content: '-';
+    margin-right: 6px;
+}
+
+.main__payment-header {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 43px;
+    font-family: 'GeometriaBold', sans-serif;
+}
+
 .main__box {
     width: 280px;
     height: 200px;
@@ -97,7 +134,7 @@ ul {
     color: #fff;
     transform: rotate(-12deg);
     margin-right: 24px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     font-family: 'GeometriaBold', sans-serif;
     font-size: 64px;
     line-height: 77px;
@@ -118,18 +155,19 @@ ul {
     margin-top: -34px;
 }
 
-.main__btn--bordered {
+.main__btn--bordered,.profile__btn--bordered {
     border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 10px;
     margin: 8px 12px;
     padding: 12px 36px;
+    width: 100%;
 }
 
 .main__invitation {
     display: flex;
     align-items: center;
-    margin-top: 36px;
+    margin: 36px 0;
 }
 
 .main__invitation-title {
@@ -145,6 +183,7 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 80px;
     background-image: linear-gradient(#FFC700, #FFC700), url('./img/content/city.png');
     background-blend-mode: color;
     background-repeat: no-repeat;
@@ -176,6 +215,13 @@ ul {
     margin-top: 88px;
 }
 
+.main__payment-text {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 43px;
+    font-family: 'GeometriaBold', sans-serif;
+}
+
 .secondary-title {
     width: 100%;
     background-color: #000000;
@@ -205,6 +251,7 @@ ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 80px;
 }
 
 .slider-arrows {
@@ -396,6 +443,10 @@ ul {
     margin-bottom: 44px;
 }
 
+.main__info:last-child {
+    margin-bottom: 80px;
+}
+
 .info__title {
     font-weight: 900;
     font-size: 36px;
@@ -416,6 +467,10 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.main__games {
+    margin-bottom: 80px;
 }
 
 .games__block {
@@ -479,6 +534,10 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.main__news {
+    margin-bottom: 80px;
 }
 
 .news__figure {
@@ -564,6 +623,85 @@ ul {
     transition: 0.4s;
 }
 
+.profile {
+    min-height: 290px;
+}
+
+.profile__file {
+    display: none;
+}
+
+.profile__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__data, .profile__top, .profile__bottom {
+    width: 100%;
+}
+
+.profile__img-container {
+    line-height: 0;
+}
+
+.profile__label {
+    display: block;
+    width: 100%;
+    padding: 32px;
+    background-color: #FDCC17;
+    text-align: center;
+}
+
+.profile__img {
+    width: 100%;
+}
+
+.profile__invitation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.profile__invitation img {
+    margin-right: 6px;
+}
+
+.profile__text-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 22px;
+}
+
+.profile__text-input-legend {
+    margin-bottom: 12px;
+}
+
+.profile__input {
+    width: 100%;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.profile__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 22px;
+    background-color: #FDCC17;
+    border: 0;
+}
+
+.profile__description {
+    text-align: center;
+    margin-top: 24px;
+}
+
 /* image poster clicked, player class added using js */
 
 .main__video.player img {
@@ -598,8 +736,9 @@ ul {
 .aside__close {
     width: 24px;
     height: 24px;
-    background-color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #FFC700;
+    background-color: #FFC700;
+    color: #fff;
     border-radius: 2px;
 }
 
@@ -697,7 +836,6 @@ ul {
 }
 
 @media (min-width: 540px) {
-
     .main__container,
     .footer__container {
         padding: 0 24px;
@@ -706,10 +844,9 @@ ul {
 }
 
 @media (min-width: 768px) {
-
     .main__container,
     .footer__container {
-        padding: 0 42px;
+        padding: 42px;
         width: 768px;
     }
 
@@ -798,6 +935,42 @@ ul {
     .news__img {
         height: 220px;
     }
+
+    .profile {
+        height: 400px;
+    }
+
+    .profile__block {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .profile__bottom, .profile__top {
+        height: 100%;
+    }
+
+    .profile__bottom,.profile__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .profile__bottom {
+        margin-left: 34px;
+    }
+
+    .profile__text-input{
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .profile__btn {
+        margin: 0;
+    }
+    
+    .profile__description {
+        margin: 0;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -830,13 +1003,11 @@ ul {
 
     .header__link {
         margin-right: 30px;
-        color: #fff;
     }
 
     .header__link a {
         display: block;
         cursor: pointer;
-        color: #fff;
         text-decoration: none;
         transition: 0.4s;
     }
@@ -896,11 +1067,27 @@ ul {
     .schedule__container {
         margin: 34px auto;
     }
+
+    .profile {
+        height: 600px;
+    }
+
+    .profile__bottom {
+        justify-content: flex-start;
+    }
+
+    .profile__text-input {
+        margin-bottom: 24px;
+    }
+
+    .profile__description {
+        margin: 24px;
+    }
 }
 
 @media (min-width: 1440px) {
     .main__container {
-        padding: 0 24px;
+        padding: 24px;
         width: 1200px;
     }
 
