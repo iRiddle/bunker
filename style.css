@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
 body {
     font-family: 'GeometriaLight', sans-serif;
 }
@@ -156,6 +162,8 @@ ul {
 }
 
 .main__btn--bordered,.profile__btn--bordered {
+    display: flex;
+    justify-content: center;
     border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 10px;

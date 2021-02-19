@@ -16,25 +16,25 @@
         <div class="aside__container">
             <ul>
                 <li>
-                    <a href="">Новости</a>
+                    <a href="#news">Новости</a>
                 </li>
                 <li>
-                    <a href="">Тарифы</a>
+                    <a href="#tarrifs">Тарифы</a>
                 </li>
                 <li>
-                    <a href="">Правила</a>
+                    <a href="#rules">Правила</a>
                 </li>
                 <li>
-                    <a href="">Играть онлайн</a>
+                    <a href="#play">Играть онлайн</a>
                 </li>
                 <li>
-                    <a href="">ЧаВо</a>
+                    <a href="#faq">ЧаВо</a>
                 </li>
                 <li>
-                    <a href="">Контакты</a>
+                    <a href="#contacts">Контакты</a>
                 </li>
                 <li>
-                    <a href="">ЛК</a>
+                    <a href="lk.html">ЛК</a>
                 </li>
             </ul>
             <button class="aside__close" onclick="closeMenu()">
@@ -78,7 +78,7 @@
                         <a href="#contacts">Контакты</a>
                     </li>
                     <li class="header__link">
-                        <a href="#">ЛК</a>
+                        <a href="lk.html">ЛК</a>
                     </li>
                 </ul>
             </nav>
@@ -93,11 +93,11 @@
                 </span> и онлайн
             </h1>
         </div>
-        <button class="main__btn">
+        <a href="" class="main__btn">
             <div class="main__btn--bordered">
                 Найти игру
             </div>
-        </button>
+        </a>
         <div class="invitation main__invitation">
             <span class="main__invitation-title">Отправить приглашение в:</span>
             <img src="./img/icons/vk.svg" alt="вконтакте">
@@ -122,14 +122,14 @@
             <div class="main__opportunities-lines"></div>
         </div>
         <div class="main__container">
-            <h2 class="secondary-title">
+            <h2 id='rules' class="secondary-title">
                 <div class="secondary-title__container">
                     <span>
                         Правила
                     </span>
                 </div>
             </h2>
-            <div id='rules' class="main__slider-container">
+            <div class="main__slider-container">
                 <div class="main__slider-wrapper">
                     <div class="slider main__slider">
                         <div class="slider__item">
@@ -354,12 +354,12 @@
         </div>
         <button class="btn-load">Загрузить еще</button>
         <div class="main__container">
-            <h2 class="secondary-title">
+            <h2 id='faq' class="secondary-title">
                 <div class="secondary-title__container">
                     <span>Часто задаваемые вопросы</span>
                 </div>
             </h2>
-            <div id='faq' class="info main__info">
+            <div class="info main__info">
                 <h2 class="info__title">Сколько по времени длится партия?</h2>
                 <p class="info__description">В зависимости от опытности игроков и слаженности игрового процесса средняя
                     партия занимает от полутора до двух часов. Стоит понимать что каждая партия уникальна и разброс во
@@ -380,7 +380,7 @@
                     времени может быть существенным.</p>
             </div>
             <button class="btn-load">Загрузить еще</button>
-            <h2 class="secondary-title">
+            <h2 id='tarrifs' class="secondary-title">
                 <div class="secondary-title__container">
                     <span>Стоимость онлайн-игры</span>
                 </div>
@@ -407,12 +407,12 @@
                     <h4 class="games__cost">3500 руб</h4>
                 </div>
             </div>
-            <h2 class="secondary-title">
+            <h2 id='news' class="secondary-title">
                 <div class="secondary-title__container">
                     <span>Новости</span>
                 </div>
             </h2>
-            <div id='news' class="news main__news">
+            <div class="news main__news">
                 <article class="news__block">
                     <figure class="news__figure">
                         <img class="news__img" src="./img/content/news1.jpg" alt="">
@@ -446,7 +446,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer id='contacts' class="footer">
         <div class="footer__container">
             <div class="footer__contacts">
                 <div class="footer__contact-block">
